@@ -47,7 +47,7 @@ public class Asmt2 {
 
 			if (input == 2) {
 				System.out.println("[섭씨와 화씨]");
-				System.out.println("입력할 값이 섭씨냐 화씨냐?");
+				System.out.println("입력 할 값이 섭씨 or 화씨?");
 				System.out.println("1:섭씨  2:화씨");
 
 				int inputCorF = scanner.nextInt();
@@ -55,11 +55,12 @@ public class Asmt2 {
 				if (inputCorF == 1) {
 
 					System.out.println("섭씨 값 입력하셈");
-					double inputC = scanner.nextInt();
+					double inputC = scanner.nextDouble();
 
 					double result = (inputC * 1.8) + 32;
 
-					System.out.println(inputC + "℃" + " = " + result + "Ｆ");
+					String message = String.format("%.3f℃ = %.2fＦ", inputC, result );
+					System.out.println(message);
 					System.out.println(" ");
 					System.out.println("1: 처음으로 ");
 					System.out.println("2: 종료 ");
@@ -73,11 +74,12 @@ public class Asmt2 {
 				} else if (inputCorF == 2) {
 
 					System.out.println("화씨 값 입력하셈");
-					double inputF = scanner.nextInt();
+					double inputF = scanner.nextDouble();
 
 					double result = (inputF - 32) / 1.8;
 
-					System.out.println(inputF + "Ｆ" + " = " + result + "℃");
+					String message = String.format("%.3fＦ = %.2f℃", inputF, result );
+					System.out.println(message);
 					System.out.println(" ");
 					System.out.println("1: 처음으로 ");
 					System.out.println("2: 종료 ");
@@ -93,14 +95,15 @@ public class Asmt2 {
 			if (input == 3) {
 				System.out.println("[BMI 계산]");
 				System.out.println("당신의 몸 무게는? (kg");
-				double inputW = scanner.nextInt();
+				double inputW = scanner.nextDouble();
 				System.out.println("당신의 키는? (cm");
-				double inputH = scanner.nextInt();
+				double inputH = scanner.nextDouble();
 
 				double bmi = inputW / ((inputH/100.0) * (inputH/100.0));
 
 				System.out.println("몸 무게 : " + inputW + "cm" + "   키 : " + inputH + "cm");
-				System.out.println("BMI 지수 : " + bmi);
+				String message = String.format("BMI 지수 : %.2f", bmi);
+				System.out.println(message);
 				System.out.println(" ");
 
 				if (bmi < 18.5) {
