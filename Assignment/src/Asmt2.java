@@ -45,7 +45,7 @@ public class Asmt2 {
 
 			}
 
-			if (input == 2) {
+			else if (input == 2) {
 				System.out.println("[섭씨와 화씨]");
 				System.out.println("입력 할 값이 섭씨 or 화씨?");
 				System.out.println("1:섭씨  2:화씨");
@@ -92,7 +92,7 @@ public class Asmt2 {
 				}
 
 			}
-			if (input == 3) {
+			else if (input == 3) {
 				System.out.println("[BMI 계산]");
 				System.out.println("당신의 몸 무게는? (kg");
 				double inputW = scanner.nextDouble();
@@ -133,7 +133,7 @@ public class Asmt2 {
 				}
 			}
 
-			if (input == 4) {break;
+			else if (input == 4) {break;
 			}
 
 		}
