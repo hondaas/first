@@ -70,13 +70,11 @@ public class Staff {
 		return done;
 	}
 
-	
-	
-	public void giveList(Chef chef){
-		chef.cookTuna(tunaKList,this);
-		chef.cookCheese(cheeseKList,this);
+	public void giveList(Chef chef) {
+		chef.cookTuna(tunaKList, this);
+		chef.cookCheese(cheeseKList, this);
 	}
-	
+
 	public void gettTuna(int tunaDish) {
 		this.tunaKStock = tunaDish;
 	}
@@ -116,36 +114,34 @@ public class Staff {
 			}
 
 			else if (selectedMenu == CHEESEKIMBOB) {
-				if (cheeseKStock > 0) {
-					if (paidMoney >= CHEESE_PRICE) {
-						cheeseKList++;
-						paidMoney -= CHEESE_PRICE;
-					} else {
-						System.out.println("잔액이 부족합니다.");
-					}
-				} else {
-					System.out.println("재고가 부족합니다.");
+
+				if (paidMoney >= CHEESE_PRICE) {
+					cheeseKList++;
+					paidMoney -= CHEESE_PRICE;
+				}
+
+				else {
+					System.out.println("잔액이 부족합니다.");
 				}
 			}
 
-			else if (selectedMenu == 3) {
+			else if (selectedMenu == 3)
+
+			{
 				guest.getRemainMoney(paidMoney);
 				this.money -= paidMoney;
-				
+
 				done = 1;
-				
+
 				break;
 			}
-
-			
-			
 		}
 
 	}
 
 	@Override
 	public String toString() {
-		String message = String.format("참치김밥 개수 : %d | 치즈김밥 개수 : %d\n잔액 :%d", tunaKStock, cheeseKStock, money);
+		String message = String.format("[staff 일지]\n서빙한 참치김밥 개수 : %d | 서빙한 치즈김밥 개수 : %d\n자산 :%d", tunaKStock, cheeseKStock, money);
 		return message;
 
 	}

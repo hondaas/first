@@ -31,13 +31,13 @@ public class Guest {
 		return menu;
 	}
 
-	public void servedTuna() {
+	public void servedTuna(int Tunas) {
 
-		tunaKStock++;
+		tunaKStock=Tunas;
 	}
 
-	public void servedCheese() {
-		cheeseKStock++;
+	public void servedCheese(int Cheeses) {
+		cheeseKStock=Cheeses;
 	}
 
 	public void getRemainMoney(int remainMoney) {
@@ -46,7 +46,7 @@ public class Guest {
 
 	@Override
 	public String toString() {
-		String message = String.format("나온 참지김밥 : %d | 나온 치즈김밥 : %d \n잔액 :%d", tunaKStock, cheeseKStock, money);
+		String message = String.format("[맛있게 드세요]\n나온 참지김밥 : %d | 나온 치즈김밥 : %d \n소지금 :%d", tunaKStock, cheeseKStock, money);
 		return message;
 	}
 

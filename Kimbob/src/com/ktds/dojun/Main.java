@@ -10,13 +10,23 @@ public class Main {
 		Chef chef = new Chef(100, 100, 100, 100);
 
 		guest.order(staff, 10000);
-		
+
 		if (staff.getDone() > 0) {
-	staff.giveList(chef);}
+			staff.giveList(chef);
+		}
 		
-			
+		guest.servedCheese(staff.getCheeseKStock());
+		guest.servedTuna(staff.getTunaKStock());
+		
+		System.out.println(guest);
+		System.out.println(staff);
+		System.out.println(chef);
+		
+		
+		
+
 	}
-	
+
 	public static void main(String[] args) {
 		new Main().start();
 	}
