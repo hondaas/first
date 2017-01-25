@@ -3,6 +3,9 @@ package HoeWork2;
 import java.util.Scanner;
 
 public class Main {
+	
+	int fg= 1 ;
+	
 	public static void main(String[] args) {
 		SumAndAverage 	saa = new SumAndAverage();
 		Temperator 		tmp = new Temperator();

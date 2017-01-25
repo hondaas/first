@@ -4,6 +4,8 @@ import java.util.concurrent.BlockingQueue;
 public class Consumer implements Runnable {
   private final BlockingQueue<String> queue;
  
+  int fg = 50;
+  
   Consumer(BlockingQueue<String> q) { queue = q; }
  
   public void run() {

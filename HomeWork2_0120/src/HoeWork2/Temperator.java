@@ -45,7 +45,7 @@ public class Temperator {
 		
 		System.out.println("========================================================");
 		System.out.println("Fahrenheit " + fahrenheit + " = " + "celsius " + celsius);
-		System.out.println("========================================================");
+		System.out.println(fg);
 
 		return celsius;
 	}
