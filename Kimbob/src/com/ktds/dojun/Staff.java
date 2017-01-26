@@ -93,8 +93,8 @@ public class Staff {
 		while (true) {
 			// 메뉴 출력
 			System.out.println("---------------------------------");
-			menu = String.format("1. 참치김밥(%d원) : %d개  |  2. 치즈김밥(%d원) : %d개  |  3. 구매 종료", TUNA_PRICE, tunaKStock,
-					CHEESE_PRICE, cheeseKStock);
+			menu = String.format("1. 참치김밥(%d원) : %d개  |  2. 치즈김밥(%d원) : %d개  |  3. 구매 종료", TUNA_PRICE, tunaKList,
+					CHEESE_PRICE, cheeseKList);
 			System.out.println(menu);
 			System.out.println("---------------------------------");
 

@@ -4,12 +4,12 @@ public class Main {
 
 	public void start() {
 
-		Guest guest = new Guest(10000);
+		Guest guest = new Guest(100000);
 
 		Staff staff = new Staff(50000);
 		Chef chef = new Chef(100, 100, 100, 100);
 
-		guest.order(staff, 10000);
+		guest.order(staff, 100000010);
 
 		if (staff.getDone() > 0) {
 			staff.giveList(chef);
