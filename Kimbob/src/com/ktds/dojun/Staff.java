@@ -91,7 +91,7 @@ public class Staff {
 		int selectedMenu = 0;
 
 		while (true) {
-			// 메뉴 출력
+			
 			System.out.println("---------------------------------");
 			menu = String.format("1. 참치김밥(%d원) : %d개  |  2. 치즈김밥(%d원) : %d개  |  3. 구매 종료", TUNA_PRICE, tunaKList,
 					CHEESE_PRICE, cheeseKList);
@@ -99,7 +99,7 @@ public class Staff {
 			System.out.println("---------------------------------");
 
 			System.out.print("메뉴를 선택하세요 : ");
-			// 사용자가 메뉴를 선택한다.
+		
 			selectedMenu = guest.selectMenu();
 
 			if (selectedMenu == TUNAKIMBOB) {

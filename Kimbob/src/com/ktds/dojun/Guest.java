@@ -20,6 +20,22 @@ public class Guest {
 		this.money = money;
 	}
 
+	public void setTunaKStock(int tunaKStock) {
+		this.tunaKStock = tunaKStock;
+	}
+
+	public int getTunaKStock() {
+		return tunaKStock;
+	}
+
+	public void setCheeseKStock(int cheeseKStock) {
+		this.cheeseKStock = cheeseKStock;
+	}
+
+	public int getCheeseKStock() {
+		return cheeseKStock;
+	}
+
 	public void order(Staff staff, int paidMoney) {
 		this.money -= paidMoney;
 		staff.receive(paidMoney, this);
@@ -33,11 +49,11 @@ public class Guest {
 
 	public void servedTuna(int Tunas) {
 
-		tunaKStock=Tunas;
+		tunaKStock = Tunas;
 	}
 
 	public void servedCheese(int Cheeses) {
-		cheeseKStock=Cheeses;
+		cheeseKStock = Cheeses;
 	}
 
 	public void getRemainMoney(int remainMoney) {
@@ -46,7 +62,8 @@ public class Guest {
 
 	@Override
 	public String toString() {
-		String message = String.format("\n[맛있게 드세요]\n나온 참지김밥 : %d | 나온 치즈김밥 : %d \n소지금 :%d", tunaKStock, cheeseKStock, money);
+		String message = String.format("\n[맛있게 드세요]\n나온 참지김밥 : %d | 나온 치즈김밥 : %d \n소지금 :%d", tunaKStock, cheeseKStock,
+				money);
 		return message;
 	}
 

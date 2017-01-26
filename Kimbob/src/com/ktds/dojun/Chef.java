@@ -7,6 +7,11 @@ public class Chef {
 	private int cheese;
 	private int bob;
 
+	private int tunaReady;
+	private int cheeseReady;
+	
+	
+	
 	public Chef(int tuna, int kim, int cheese, int bob) {
 
 		this.tuna = tuna;
@@ -54,8 +59,11 @@ public class Chef {
 				bob = bob - 2;
 				kim = kim - 2;
 				tuna--;
+				
+				tunaReady++;
+				
 			} 
-			staff.gettTuna(tunaCook);
+			staff.gettTuna(tunaReady);
 			
 		}else
 			System.out.println("재료가 부족합니다.");
@@ -69,8 +77,11 @@ public class Chef {
 				bob = bob - 2;
 				kim = kim - 2;
 				cheese--;
+				
+				cheeseReady++;
+				
 			} 
-			staff.gettCheese(cheeseCook);
+			staff.gettCheese(cheeseReady);
 			
 		}else
 			System.out.println("재료가 부족합니다.");
