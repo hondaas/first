@@ -141,7 +141,7 @@ public class Staff {
 
 	@Override
 	public String toString() {
-		String message = String.format("[staff 일지]\n서빙한 참치김밥 개수 : %d | 서빙한 치즈김밥 개수 : %d\n자산 :%d", tunaKStock, cheeseKStock, money);
+		String message = String.format("\n[staff 일지]\n서빙한 참치김밥 개수 : %d | 서빙한 치즈김밥 개수 : %d\n자산 :%d", tunaKStock, cheeseKStock, money);
 		return message;
 
 	}
