@@ -11,7 +11,7 @@ public class Main {
 	public void start() {
 		Admin admin = new Admin();
 		BookSys bookSys = new BookSys();
-		Reserver reserver = new Reserver(30000);
+		Reserver reserver = new Reserver(300000);
 
 		
 		while(true){
