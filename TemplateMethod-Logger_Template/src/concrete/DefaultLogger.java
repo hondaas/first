@@ -19,8 +19,8 @@ public class DefaultLogger extends Logger {
 	@Override
 	protected void writeLog(String loggerName, String logDateTime, String logMessage) {
 		StringBuffer sb = new StringBuffer();
-		sb.append("[" + loggerName + "] ");
-		sb.append("[" + logDateTime + "] ");
+		sb.append("" + loggerName + "] ");
+		sb.append("" + logDateTime + "] ");
 		sb.append(logMessage);
 		
 		System.out.println(sb.toString());

@@ -15,7 +15,7 @@ public class Asmt2 {
 			int input = scanner.nextInt();
 
 			if (input == 1) {
-				System.out.println("[총점과 평균]");
+				System.out.println("총점과 평균");
 				System.out.println("점수를 5개 입력하세요");
 				System.out.println("점수1");
 				int score1 = scanner.nextInt();
@@ -46,7 +46,7 @@ public class Asmt2 {
 			}
 
 			else if (input == 2) {
-				System.out.println("[섭씨와 화씨]");
+				System.out.println("섭씨와 화씨");
 				System.out.println("입력 할 값이 섭씨 or 화씨?");
 				System.out.println("1:섭씨  2:화씨");
 
@@ -93,7 +93,7 @@ public class Asmt2 {
 
 			}
 			else if (input == 3) {
-				System.out.println("[BMI 계산]");
+				System.out.println("BMI 계산");
 				System.out.println("당신의 몸 무게는? (kg");
 				double inputW = scanner.nextDouble();
 				System.out.println("당신의 키는? (cm");

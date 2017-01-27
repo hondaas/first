@@ -22,8 +22,8 @@ public class ComplexLogger extends Logger {
 	@Override
 	protected void writeLog(String loggerName, String logDateTime, String logMessage) {
 		StringBuffer sb = new StringBuffer();
-		sb.append("[" + loggerName + "] ");
-		sb.append("[" + logDateTime + "] ");
+		sb.append("" + loggerName + "] ");
+		sb.append("" + logDateTime + "] ");
 		sb.append(logMessage);
 		
 		System.out.println(sb.toString());
@@ -34,7 +34,7 @@ public class ComplexLogger extends Logger {
 	private void writeFile(String message) {
 		File logFile = new File("d:\\logger.txt");
 		
-		// ÆÄÀÏ »ý¼º
+		// ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		if ( !logFile.exists() ) {
 			try {
 				logFile.createNewFile();

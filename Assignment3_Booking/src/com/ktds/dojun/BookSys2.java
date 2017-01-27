@@ -2,7 +2,7 @@ package com.ktds.dojun;
 
 import java.util.Scanner;
 
-public class BookSys {
+public class BookSys2 {
 
 	private String[][] seatList = { { "01", "02", "03", "04", "05", "06", "07", "08" },
 			{ "09", "10", "11", "12", "13", "14", "15", "16" }, { "17", "18", "19", "20", "21", "22", "23", "24" },
@@ -33,38 +33,11 @@ public class BookSys {
 		this.budget = budget;
 	}
 
-	public void bookDateRead() {
-
-		FileRead.start();
-
-		String[] readList = FileRead.getDatam().split(" ");
-
-		int q = 0;
-		for (int i = 0; i < 9; ++i) {
-
-			for (int j = 0; j < 8; ++j) {
-
-				q++;
-				seatList[i][j] = readList[q];
-			}
-		}
-
-	}
-
 	public void bookProcess(int money, Reserver reserver) {
-		FileWriteHelper.makeLogsFolder();
-		FileWriteHelper.makeCalculatorLogFile();
-		this.bookDateRead();
-
 		Scanner input = new Scanner(System.in);
-		System.out.println("상영 영화 : [라라랜드]");
-		System.out.println(" ");
-
-		this.seatCount();
-
-		System.out.println(" ");
-
-		System.out.println("관람 인원 수를 선택하세요.");
+		
+		
+		System.out.println("인원 수를 선택하세요.");
 
 		int typeQ = input.nextInt();
 
@@ -120,20 +93,20 @@ public class BookSys {
 
 		int nTotal = PRICE_N * selectedN;
 		int sTotal = PRICE_S * selectedS;
-		System.out.println(" ");
+
 		System.out.println("일반석 : " + selectedN + " 석");
 		System.out.println("SweetBox : " + selectedS + " 석");
-		System.out.println(" ");
+
 		System.out.println("총 금액은  [ " + (sTotal + nTotal) + " 원 ] 입니다.");
-		System.out.println("----------------------------------------------");
+
 		System.out.println("결제 방법을 선택해 주세요.");
-		System.out.println("  [ 1.카드   2.현금 ]");
+		System.out.println("1.카드   2.현금");
 
 		Scanner input3 = new Scanner(System.in);
 		int payMethod = input3.nextInt();
 
 		if (payMethod == 1) {
-			System.out.println("카드 결제를 요청합니다.");
+			System.out.println("결제가 완료되었습니다. \n이용해 주셔서 감사합니다.");
 		}
 
 		else if (payMethod == 2) {
@@ -144,31 +117,33 @@ public class BookSys {
 				Scanner input4 = new Scanner(System.in);
 				int insertCash = input4.nextInt();
 
-				if (insertCash < waitInsert) {
 					waitInsert -= insertCash;
-					System.out.println("지불해야 할 금액" + waitInsert);
+
+					if (insertCash <= waitInsert) {
+
+					}
+
+					
+					else {
+						reserver.pay(sTotal + nTotal);
+
+						budget += sTotal + nTotal;
+						
+						break;
+					}
 				}
-
-				else {
-					reserver.pay(sTotal + nTotal);
-
-					budget += sTotal + nTotal;
-
-					break;
-				}
+				
 			}
-
+			System.out.println("결제가 완료되었습니다.");
+			reserver.currentState();
+			
+			
+			
+			
+			
 		}
 
-		FileWriteHelper.deleteLogFile();
-
-		FileWriteHelper.makeCalculatorLogFile();
-
-		this.save();
-		System.out.println("결제가 완료되었습니다. \n이용해 주셔서 감사합니다.");
-		reserver.currentState();
-
-	}
+	
 
 	// String[] strPoints = strPoint.split(" ");
 
@@ -191,38 +166,5 @@ public class BookSys {
 				+ "[" + seatList[8][3] + "]" + "[" + seatList[8][4] + "]" + "[" + seatList[8][5] + "]" + "    " + "["
 				+ seatList[8][6] + "]" + "[" + seatList[8][7] + "]");
 
-	}
-
-	public void save() {
-
-		for (int i = 0; i < 9; ++i) {
-
-			for (int j = 0; j < 8; ++j) {
-
-				String message = seatList[i][j];
-
-				FileWriteHelper.writeLog(message);
-			}
-		}
-
-	}
-
-	public void seatCount() {
-		int count = 0;
-
-		for (int i = 0; i < 9; ++i) {
-
-			for (int j = 0; j < 8; ++j) {
-
-				if (seatList[i][j].equals("■■")) {
-
-					++count;
-
-				}
-
-			}
-		}
-
-		System.out.println("남은 좌석 : " + (72 - count) + " / 72");
 	}
 }
