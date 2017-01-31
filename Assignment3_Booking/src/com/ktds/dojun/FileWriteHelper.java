@@ -83,7 +83,8 @@ public class FileWriteHelper {
 			PrintWriter out = new PrintWriter(bw);
 
 			out.println(message);
-
+			out.flush();
+			
 			out.close();
 			bw.close();
 			fw.close();
