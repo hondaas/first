@@ -14,6 +14,7 @@ public class Asmt1 {
 
 			System.out.println(b);
 
+			
 			b = b + "%";
 		}
 		
