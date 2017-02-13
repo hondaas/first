@@ -7,16 +7,13 @@ public class Store {
 
 	public void start() { 
 				
-		Buyer lyj = new Buyer (0, 500000);
-		Seller nym = new Seller (500, 500000);
+		BuyMechanism lyj = new Buyer (0, 500000);
+		SellMechanism nym = new Seller (500, 500000);
 		
 		lyj.buy(nym);
 		
 		System.out.println(lyj);
 		System.out.println(nym);
-		
-		
-		
 		
 	}
 

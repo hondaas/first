@@ -5,7 +5,7 @@ public class Asmt1 {
 
 		System.out.println("dfg");
 		System.out.println();
-		System.out.print(/n");
+		System.out.print("/n");
 		
 		
 		String b = "%";
@@ -14,6 +14,7 @@ public class Asmt1 {
 
 			System.out.println(b);
 
+			
 			b = b + "%";
 		}
 		

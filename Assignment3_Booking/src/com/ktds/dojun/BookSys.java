@@ -35,17 +35,16 @@ public class BookSys {
 
 	public void bookDateRead() {
 
-		FileRead.start();
 
+		FileRead.start();
 		String[] readList = FileRead.getDatam().split(" ");
 
 		int q = 0;
 		for (int i = 0; i < 9; ++i) {
 
 			for (int j = 0; j < 8; ++j) {
-
-				q++;
 				seatList[i][j] = readList[q];
+				q++;
 			}
 		}
 
@@ -215,9 +214,7 @@ public class BookSys {
 			for (int j = 0; j < 8; ++j) {
 
 				if (seatList[i][j].equals("■■")) {
-
 					++count;
-
 				}
 
 			}

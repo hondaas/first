@@ -1,5 +1,6 @@
 package com.ktds.dojun.Buyer;
 import com.ktds.dojun.BuyMechanism;
+import com.ktds.dojun.SellMechanism;
 import com.ktds.dojun.Seller.*;
 import com.ktds.dojun.vo.BasketVO;
 
@@ -21,7 +22,7 @@ public class Buyer implements BuyMechanism {
 		System.out.println(this);
 
 	}
-	public void buy(Seller seller){
+	public void buy(SellMechanism seller){
 		seller.sell(this);
 		
 	}
